@@ -1,3 +1,3 @@
-import createFunctionalComponent from '../../utils/createFunctionalComponent'
+import createFunctionalComponent from '../utils/createFunctionalComponent'
 const Em = createFunctionalComponent('Em')
 export default Em

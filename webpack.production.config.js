@@ -7,8 +7,8 @@ var srcPath = path.join(__dirname, 'src')
 var DEBUG = false
 
 var aliases = {}
-aliases['createFunctionalComponent'] = path.resolve(__dirname) + '/src/utils/createFunctionalComponent.js'
-aliases['createClassComponent'] = path.resolve(__dirname) + '/src/utils/createClassComponent.js'
+aliases['../utils/createFunctionalComponent'] = path.resolve(__dirname) + '/src/utils/createFunctionalComponent.js'
+aliases['../utils/createClassComponent'] = path.resolve(__dirname) + '/src/utils/createClassComponent.js'
 
 var entryPoints = {
   index: './src/primatives/index.js',
@@ -31,7 +31,7 @@ module.exports = {
   target: 'web',
   entry: entryPoints,
   output: {
-    path: path.resolve('lib/primatives'),
+    path: path.resolve('lib'),
     filename: '[name]/index.js',
     libraryTarget: 'commonjs2',
     library: packageInfo.name
