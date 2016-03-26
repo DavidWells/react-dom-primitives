@@ -1,6 +1,6 @@
 {
   "name": "react-primatives",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Base set of React DOM Components",
   "main": "src/index.js",
   "scripts": {
