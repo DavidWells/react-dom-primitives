@@ -2,7 +2,7 @@
   "name": "react-primatives",
   "version": "0.0.2",
   "description": "Base set of React DOM Components",
-  "main": "src/index.js",
+  "main": "lib",
   "scripts": {
     "start": "node server.js",
     "clean-lib": "node_modules/.bin/rimraf ./lib",
