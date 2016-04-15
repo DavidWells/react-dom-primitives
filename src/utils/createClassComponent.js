@@ -5,9 +5,10 @@ import React, { Component } from 'react'
  * @return function         returns function component dom node
  */
 function createClassComponent (n, config) {
+  //https://github.com/andreypopp/rethemeable/blob/master/src/Themeable.js#L21
   return class DOMClassPrimative extends Component {
     static displayName = `${n}`;
-
+    // https://github.com/andreypopp/rethemeable/blob/master/src/Themeable.js#L17
     render () {
       const { customComponent, children } = this.props
       const element = customComponent || n.toLowerCase()

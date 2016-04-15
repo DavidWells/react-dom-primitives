@@ -13,7 +13,9 @@ aliases['../utils/createClassComponent'] = path.resolve(__dirname) + '/src/utils
 var entryPoints = {
   index: './src/primatives/index.js',
 }
-
+function capitalize (string) {
+  return string.charAt(0).toUpperCase() + string.slice(1)
+}
 var tagList = require('./src/tagList')
 console.log('PROD')
 /* Assign aliases, define externs, define entrypoints */
@@ -21,7 +23,7 @@ for (var i = 0; i < tagList.length; i++) {
   var primative = tagList[i]
   /* define entryPoints  */
   //entryPoints[primative] = ['./src/primatives/' + primative]
-  entryPoints[primative] = ['./src/primatives/' + primative + '/'+primative+'.functional.js']
+  entryPoints[capitalize(primative)] = ['./src/primatives/' + primative + '/'+primative+'.functional.js']
 }
 
 var externals = ['../utils/createFunctionalComponent', '../utils/createClassComponent']
