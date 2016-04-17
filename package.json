@@ -1,15 +1,17 @@
 {
-  "name": "react-primatives",
-  "version": "0.0.5",
+  "name": "react-dom-primatives",
+  "version": "0.0.1",
   "description": "Base set of React DOM Components",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
     "clean-lib": "node_modules/.bin/rimraf ./lib",
-    "build": "npm run clean-lib && webpack --config webpack.production.config.js --colors --progress --inline && npm run build:utils && npm run build:index",
+    "build": "npm run clean-lib && webpack --config webpack.production.config.js --colors --progress --inline && npm run build:utils && npm run build:index && npm run copypackage",
     "build:utils": "webpack --config webpack.production.utils.config.js --colors --progress --inline",
     "build:index": "babel src/primatives/index.js --out-file lib/index.js",
-    "pub": "cp -rf package.json lib && cd lib && npm publish"
+    "b": "babel src/primatives/A/A.functional.js --out-file lib/test.js",
+    "copypackage": "cp -rf package.json lib",
+    "dist": "cd lib && npm publish"
   },
   "author": "David Wells",
   "repository": {
