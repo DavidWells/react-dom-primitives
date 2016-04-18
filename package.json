@@ -1,5 +1,5 @@
 {
-  "name": "react-dom-primatives",
+  "name": "react-dom-primitives",
   "version": "0.0.1",
   "description": "Base set of React DOM Components",
   "main": "index.js",
@@ -10,7 +10,7 @@
     "build:utils": "webpack --config webpack.production.utils.config.js --colors --progress --inline",
     "build:index": "babel src/primatives/index.js --out-file lib/index.js",
     "b": "babel src/primatives/A/A.functional.js --out-file lib/test.js",
-    "copypackage": "cp -rf package.json lib",
+    "copypackage": "cp -rf package.json lib && cp -rf readme.md lib",
     "dist": "cd lib && npm publish"
   },
   "author": "David Wells",
