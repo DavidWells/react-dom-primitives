@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node server.js",
     "clean-lib": "node_modules/.bin/rimraf ./lib",
-    "build": "npm run clean-lib && webpack --config webpack.production.config.js --colors --progress --inline && npm run build:utils && npm run build:index && npm run copypackage",
+    "build": "npm run clean-lib && npm run build:functional && npm run build:utils && npm run build:class && npm run build:index && npm run copypackage",
+    "build:class": "webpack --config webpack.production.class.config.js --colors --progress --inline",
+    "build:functional": "webpack --config webpack.production.config.js --colors --progress --inline",
     "build:utils": "webpack --config webpack.production.utils.config.js --colors --progress --inline",
     "build:index": "babel src/primatives/index.js --out-file lib/index.js",
     "b": "babel src/primatives/A/A.functional.js --out-file lib/test.js",
